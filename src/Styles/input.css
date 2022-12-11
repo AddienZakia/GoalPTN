@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Sora", sans-serif;
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-whitedef h-2;
+  }
+
+  /* custom scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-md bg-gradient-to-br from-birutua to-birumuda shadow-lg shadow-birumuda;
+  }
+
+  .body {
+    @apply px-[2em] md:px-[5em] text-birudef overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .textheader {
+    @apply text-xl md:text-[1em] md:hover:text-birumuda md:transition;
+  }
+
+  .buttonheader {
+    @apply transition duration-500 bg-gradient-to-r from-birutua to-birumuda shadow-lg shadow-birumuda/30 hover:shadow-none py-2.5 rounded-[3em] text-whitedef md:hidden cursor-pointer;
+  }
+
+  .footerhalaman {
+    @apply md:mt-3 lg:mx-10;
+  }
+
+  .footerhalaman h1 {
+    @apply font-bold text-lg uppercase mt-5 md:mt-0;
+  }
+
+  .footerhalaman ul li {
+    @apply my-0.5;
+  }
+
+  .footerhalaman ul li p {
+    @apply transition hover:text-white capitalize;
+  }
+
+  .lineheader {
+    @apply my-3 text-birudef md:mx-5;
+  }
+
+  .boxperubahan {
+    @apply cursor-pointer my-2 text-center rounded-xl transition duration-300 bg-whitedef hover:bg-slate-200 text-birumuda p-3 md:p-5 uppercase text-xl md:text-lg font-semibold space-y-1;
+  }
+
+  .isiboxperubahan {
+    @apply mx-auto text-[2.2em];
+  }
+
+  .boxalasan {
+    @apply relative w-full h-[20em] sm:w-auto sm:h-auto mx-auto rounded-2xl px-6 py-5 bg-gradient-to-br from-birutua to-birumuda text-whitedef overflow-hidden;
+  }
+
+  .boxdampak {
+    @apply md:text-sm px-5 py-7 md:p-5 relative bg-whitedef text-birutua rounded-lg;
+  }
+
+  .boxdampak p {
+    @apply w-[90%];
+  }
+
+  /* .boxdampak p:nth-child(1) {
+    @apply text-3xl font-bold opacity-25 absolute right-3 text-birutua top-2;
+  } */
+
+  /* snbp */
+  .bprsnbp {
+    @apply overflow-hidden relative my-5 bg-white rounded-lg py-4 px-5 shadow-lg shadow-white text-base;
+  }
+
+  .bprsnbp h2 {
+    @apply absolute top-3 left-4 text-3xl text-whitedef;
+  }
+
+  /*  px-8 py-6 rounded-full bg-gradient-to-br from-birutua to-birumuda  */
+  .bprsnbp p {
+    @apply ml-14;
+  }
+
+  .bprsnbp h1 {
+    @apply ml-14 font-bold z-20;
+  }
+
+  .bxpr {
+    @apply relative mx-auto w-[90%] px-6 py-8 rounded-xl bg-white shadow-lg shadow-white;
+  }
+
+  .bxpr span {
+    @apply absolute top-5 right-7 text-3xl text-whitedef z-[3];
+  }
+
+  .bxpr p {
+    @apply w-[80%] z-50;
+  }
+
+  .contohsoal {
+    @apply my-20;
+  }
+
+  .contohsoal h2 {
+    @apply font-bold capitalize;
+  }
+
+  .boxprinsip {
+    @apply prinsipCircle1 prinsipCircle2 relative w-full mx-auto flex items-center px-5 py-7 rounded-lg bg-gradient-to-br from-birutua to-birumuda text-whitedef;
+  }
+
+  .boxprinsip:last-child {
+    @apply col-span-2;
+  }
+
+  .boxprinsip p {
+    @apply w-[90%];
+  }
+
+  .prinsipCircle1 {
+    @apply before:absolute before:-top-5 before:-left-5 before:w-28 before:h-28 before:opacity-30 before:bg-whitedef before:rounded-full;
+  }
+
+  .prinsipCircle2 {
+    @apply after:absolute after:-bottom-5 after:-right-5 after:w-28 after:h-28 after:opacity-30 after:bg-whitedef after:rounded-full;
+  }
+
+  .iconprinsip {
+    @apply absolute top-3 right-3 text-[4em] opacity-40 md:static md:opacity-80;
+  }
+
+  .dampaktes {
+    @apply text-center w-[70%] mx-auto md:w-full px-5 py-7;
+  }
+
+  .dampaktes div {
+    @apply w-20 h-20 bg-birumuda rounded-full m-auto flex justify-center items-center my-3;
+  }
+
+  .logodampak {
+    @apply text-[3em] my-3  mx-auto  text-whitedef m-auto;
+  }
+  /* taro di icon, dampaktes div kasih relative, icon buat absolute */
+  /* .dampaktes div {
+    @apply relative before:block before:bg-blue-500 before:w-10 before:h-10 before:rounded-full;
+  } */
+}
+
+@layer utilities {
+  .title {
+    @apply uppercase font-bold text-birumuda;
+  }
+
+  .circlebox {
+    @apply absolute -top-9 -left-9;
+  }
+
+  .iconpersiapan {
+    @apply text-birumuda text-[2.5em];
+  }
+
+  .vektorbox {
+    @apply absolute top-0 right-0 w-[7em] md:w-[6em] z-[1];
+  }
+
+  #skema ul li {
+    @apply list-disc ml-10;
+  }
+
+  .blob {
+    @apply absolute block bg-gradient-to-br from-birutua to-birumuda rounded-full;
+  }
+}
